@@ -1,0 +1,150 @@
+Assignment 1 – Introduction to Web Development
+
+1. Explain the difference between Frontend, Backend, and Full-Stack Development with suitable real-world examples.
+
+Frontend development refers to the part of web development that focuses on the visual and interactive elements of a website. It includes designing and developing the user interface using technologies such as HTML, CSS, and JavaScript. Everything that users see and interact with, including buttons, menus, forms, and images, is created by frontend developers.
+
+For example, on an e-commerce website such as Amazon, the product listings, search bar, navigation menu, and shopping cart interface are all components of the frontend.
+
+Backend development involves the server-side functionality of a web application. It is responsible for processing user requests, implementing business logic, managing authentication, and interacting with databases. Backend developers commonly use programming languages such as Java, Python, PHP, Node.js, or C#.
+
+For instance, when a user logs into Instagram, the backend verifies the login credentials, retrieves user information from the database, and sends the required data back to the application.
+
+Full-stack development combines both frontend and backend development. A full-stack developer is capable of developing the complete web application, including the user interface, server-side logic, APIs, and database integration.
+
+A practical example is a developer creating an online shopping website independently by designing the interface, developing the backend services, and managing the database.
+
+2. Create a simple diagram showing how the client-server model works in web architecture.
+
+```text
+          User
+            │
+            ▼
+     Web Browser (Client)
+            │
+      HTTP Request
+            │
+            ▼
+       Web Server
+            │
+     Process Request
+            │
+            ▼
+        Database
+            │
+      Retrieve Data
+            │
+            ▼
+       Web Server
+            │
+      HTTP Response
+            │
+            ▼
+     Web Browser (Client)
+```
+
+3. Describe how a browser requests and displays a web page from a web server.
+
+When a user enters the URL of a website into a web browser, the browser sends an HTTP request to the corresponding web server. Upon receiving the request, the server processes it and, if necessary, retrieves information from a database. The server then returns the requested resources, including HTML, CSS, JavaScript files, images, and other assets.
+
+The browser downloads these resources and begins rendering the webpage. HTML provides the structure of the page, CSS defines its appearance, and JavaScript adds interactivity. Once all resources have been processed, the browser displays the complete webpage to the user.
+
+4. Identify and list the tools required to set up a web development environment. Explain the purpose of each.
+
+A web development environment requires several essential tools.
+
+Visual Studio Code (VS Code): A source code editor used for writing and managing HTML, CSS, JavaScript, and other programming languages.
+
+Web Browser: Used to test and display web pages during development. Popular choices include Google Chrome and Mozilla Firefox.
+
+Git: A version control system that tracks changes made to source code and helps developers collaborate effectively.
+
+GitHub: An online platform used for hosting Git repositories, storing projects, and collaborating with other developers.
+
+Node.js: A JavaScript runtime environment that enables server-side programming and package management.
+
+Live Server Extension: A Visual Studio Code extension that automatically refreshes the browser whenever project files are modified.
+
+Terminal or Command Prompt: Used to execute commands, install packages, and manage project files.
+
+5. Explain what a web server is and give examples of commonly used servers.
+
+A web server is software or hardware that receives requests from web browsers and responds by delivering web pages or application data over the internet. It acts as the communication bridge between the client and the server-side application.
+
+Commonly used web servers include Apache HTTP Server, Nginx, Microsoft Internet Information Services (IIS), LiteSpeed Web Server, and Node.js with Express.js.
+
+6. Define the roles of a Frontend Developer, Backend Developer, and Database Administrator in a project.
+
+A Frontend Developer is responsible for designing and developing the graphical user interface of a web application. The primary objective is to create responsive, accessible, and user-friendly interfaces using HTML, CSS, JavaScript, and frontend frameworks.
+
+A Backend Developer develops the server-side functionality of the application. Responsibilities include implementing business logic, creating APIs, managing authentication, handling data processing, and integrating databases.
+
+A Database Administrator (DBA) manages the database system by designing database structures, ensuring data security, performing backups, monitoring performance, and maintaining data integrity.
+
+7. Install VS Code and configure it for HTML, CSS, and JavaScript development. Take a screenshot of the setup.
+
+The following steps were performed to configure the development environment.
+
+1. Download and install Visual Studio Code.
+2. Install essential extensions such as Live Server, Prettier, HTML CSS Support, and JavaScript (ES6) Code Snippets.
+3. Create a project folder containing the files index.html, style.css, and script.js.
+4. Open the project using Visual Studio Code.
+5. Launch the application using the Live Server extension.
+
+Note: Attach a screenshot of the configured Visual Studio Code environment showing the project files and installed extensions.
+
+8. Explain the difference between static and dynamic websites. Provide an example of each.
+
+A static website contains fixed content that remains the same for every visitor. These websites are generally created using HTML and CSS and do not require server-side processing or database connectivity.
+
+An example of a static website is a personal portfolio or a simple company information website.
+
+A dynamic website generates content based on user requests and stored data. Such websites interact with databases and use server-side programming languages to provide personalized content.
+
+Examples of dynamic websites include Facebook, Instagram, Amazon, and Flipkart.
+
+9. Research and list five web browsers. Explain how rendering engines differ between them.
+
+The following are five commonly used web browsers and their rendering engines.
+
+Google Chrome – Blink
+
+Microsoft Edge – Blink
+
+Mozilla Firefox – Gecko
+
+Apple Safari – WebKit
+
+Opera – Blink
+
+A rendering engine is responsible for interpreting HTML, CSS, and JavaScript code and displaying the webpage on the user's screen. Different browsers use different rendering engines, which may process web technologies in slightly different ways. As a result, websites may appear or behave differently across browsers. Therefore, web developers should test applications on multiple browsers to ensure compatibility and consistent performance.
+
+10. Draw a labeled diagram showing the basic web architecture flow – client, server, database, and APIs.
+
+```text
+      Client (Web Browser)
+              │
+       HTTP Request
+              │
+              ▼
+        Web Server
+              │
+      Business Logic
+              │
+              ▼
+             APIs
+              │
+      Database Access
+              │
+              ▼
+          Database
+              │
+      Retrieved Data
+              │
+              ▼
+        Web Server
+              │
+      HTTP Response
+              │
+              ▼
+      Client (Web Browser)
