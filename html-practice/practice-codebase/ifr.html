@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Divs</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box1 {
+            background-color: lightgray;
+            padding: 25px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #box2 {
+            background-color: lightblue;
+            
+            padding: 10px;
+        }
+
+        #box3 {
+            background-color: greenyellow;
+            
+            padding: 10px;
+        }
+
+        #box4 {
+            background-color: yellow;
+            
+            padding: 10px;
+        }
+
+        #box5 {
+            background-color: orange;
+            
+            padding: 10px;
+        }
+
+        #box6 {
+            background-color: red;
+            width: 200px;
+            padding: 10px;
+            height: 165px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box6">
+        <div id="box5">
+            <div id="box4">
+                <div id="box3">
+                    <div id="box2">
+                        <div id="box1">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
