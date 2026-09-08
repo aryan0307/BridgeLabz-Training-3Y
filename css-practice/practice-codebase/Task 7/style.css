@@ -1,0 +1,53 @@
+/* #1{
+           border-top: 10px solid red; 
+           
+        }
+        #2{
+           border-top: 10px solid orange; 
+        }
+        #3{
+           border-top: 10px solid yellow; 
+        }
+        #4{
+            border-top: 10px solid green;
+        }
+        #5{
+            border-top: 10px solid blue;
+        }
+        #6{
+            border-top: 10px solid indigo;
+        }
+        #7{
+            border-top: 10px solid violet;
+        } */
+        .container {
+            width: 100px;
+            display: flex;
+            height: 100px;
+            border-radius: 50%;
+            border-top: 10px solid red;
+            background-color: none;
+            /* transition: transform 1s ease; */
+            animation: playing 0.5s ease infinite ;
+        }
+        
+        /* .container:hover {
+            transform: translateX(100px) translateY(100px)rotate(360deg) scale(4);
+        } */
+        @keyframes playing{
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(90deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            75% {
+                transform: rotate(270deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
