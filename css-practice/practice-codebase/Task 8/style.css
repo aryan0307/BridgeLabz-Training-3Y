@@ -1,0 +1,62 @@
+
+        .ball{
+            height:100px;
+            width:100px;
+            background-color: red;
+            border-radius: 50%;
+            border: 5px solid black;
+            animation: bounce 2s ease infinite;
+        }
+        .grnd{
+            height:105px;
+            width:100px;
+            border-bottom: 10px solid black;
+            background-color: none;
+            position: absolute ;
+            }
+        @keyframes bounce{
+            0% {
+            transform: translateY(0px) ;
+        }
+            /* First drop to the 100px base */
+            15% {
+                transform: translateY(120px)
+                scale(1.2, 0.8);
+            }
+            /* Impact / Squash at the base */
+            18% {
+                transform: translateY(120px) scale(1.2, 0.8);
+                
+            }
+            /* Rebound 1 (peaks at 40px) */
+            35% {
+                transform: translateY(40px) ;
+            }
+            /* Second drop */
+            50% {
+                transform: translateY(120px) scale(1.2, 0.8) ;
+            }
+            /* Impact / Squash */
+            53% {
+                transform: translateY(120px) scale(1.2, 0.8) ;
+            }
+            /* Rebound 2 (shorter peak at 70px) */
+            68% {
+                transform: translateY(70px) ;
+            }
+            /* Third drop */
+            82% {
+                transform: translateY(120px) scale(1.2, 0.8) ;
+            }
+            /* Minor impact / Squash */
+            84% {
+                transform: translateY(120px) scale(1.2, 0.8);
+            }
+            /* Settling at the base */
+            92% {
+                transform: translateY(100px) scale(1.2, 0.8) ;
+            }
+            100% {
+                transform: translateY(120px) scale(1.2, 0.8);
+            }
+        }
