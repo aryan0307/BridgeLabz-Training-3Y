@@ -1,0 +1,60 @@
+/* Attribute selector */
+input[type="text"] {
+    border: 2px solid blue;
+    padding: 8px;
+}
+
+/* Attribute selector */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+/* Pseudo-class */
+li:hover {
+    background-color: lightyellow;
+}
+
+/* Pseudo-class */
+input:focus {
+    background-color: lightblue;
+    outline: 2px solid blue;
+}
+
+/* Pseudo-class */
+li:nth-child(2) {
+    color: red;
+    font-weight: bold;
+}
+
+/* Pseudo-element */
+h2::before {
+    content: "★ ";
+    color: orange;
+}
+
+/* Pseudo-element */
+h2::after {
+    content: " ★";
+    color: orange;
+}
+
+/* Child combinator */
+.box > p {
+    color: purple;
+}
+
+/* Adjacent sibling combinator */
+h3 + p {
+    background-color: lightgreen;
+}
+
+/* General sibling combinator */
+h3 ~ p {
+    padding: 5px;
+}
+
+/* Descendant combinator */
+.descendant p {
+    font-style: italic;
+}
