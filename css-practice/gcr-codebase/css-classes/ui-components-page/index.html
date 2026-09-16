@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Interface Components Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ui-wrapper">
+        <!-- Main Card-Like Container -->
+        <main class="ui-card">
+            <header class="card-header">
+                <h2>Control Dashboard</h2>
+                <p>Consistent UI components built with modern styling and state pseudo-classes.</p>
+            </header>
+
+            <div class="components-stack">
+                <!-- Component 1: Search Bar -->
+                <div class="component-group">
+                    <label for="searchBar">Search Workspace</label>
+                    <div class="search-bar">
+                        <input type="search" id="searchBar" class="search-input" placeholder="Search components, design tokens...">
+                        <button type="button" class="search-btn">Search</button>
+                    </div>
+                </div>
+
+                <!-- Component 2: Dropdown Menu -->
+                <div class="component-group">
+                    <label for="categorySelect">Filter Category</label>
+                    <div class="select-wrapper">
+                        <select id="categorySelect" class="custom-select">
+                            <option value="all">All Components</option>
+                            <option value="buttons">Buttons & Actions</option>
+                            <option value="inputs">Form Controls</option>
+                            <option value="navigation">Navigation & Menus</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Component 3: Button Collection -->
+                <div class="component-group">
+                    <label>Action Controls</label>
+                    <div class="button-row">
+                        <button type="button" class="btn btn-primary">Primary Action</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-outline">Filter Settings</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
