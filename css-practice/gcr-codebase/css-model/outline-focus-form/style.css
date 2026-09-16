@@ -1,0 +1,158 @@
+/* Reset and Global Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Card Container styling with padding, border-radius, subtle shadow */
+.form-container {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+/* Form Layout with Uniform Spacing */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Ensures uniform spacing between all form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+label span {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #38bdf8;
+    margin-left: 4px;
+}
+
+/* General Input and Textarea Styling */
+.input-field {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #0f172a;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    font-family: inherit;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Transition for smooth outline changes */
+    transition: outline-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input-field::placeholder {
+    color: #64748b;
+}
+
+textarea.input-field {
+    resize: vertical;
+}
+
+/* --- DEMONSTRATING VARIOUS OUTLINE STYLES & OUTLINE-OFFSET ON FOCUS --- */
+
+/* 1. Solid Outline with 4px Offset (Vibrant Blue) */
+.input-solid:focus {
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #3b82f6; /* Color change on focus */
+    outline-offset: 4px;    /* Custom outline-offset */
+    border-color: #3b82f6;
+}
+
+/* 2. Dashed Outline with 6px Offset (Emerald Green) */
+.input-dashed:focus {
+    outline-style: dashed;
+    outline-width: 3px;
+    outline-color: #10b981; /* Color change on focus */
+    outline-offset: 6px;    /* Custom outline-offset */
+    border-color: #10b981;
+}
+
+/* 3. Double Outline with 3px Offset (Amber Gold) */
+.input-double:focus {
+    outline-style: double;
+    outline-width: 4px;
+    outline-color: #f59e0b; /* Color change on focus */
+    outline-offset: 3px;    /* Custom outline-offset */
+    border-color: #f59e0b;
+}
+
+/* 4. Dotted Outline with 5px Offset (Purple) */
+.textarea-dotted:focus {
+    outline-style: dotted;
+    outline-width: 4px;
+    outline-color: #a855f7; /* Color change on focus */
+    outline-offset: 5px;    /* Custom outline-offset */
+    border-color: #a855f7;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    margin-top: 10px;
+    padding: 14px;
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, outline-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.submit-btn:focus {
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #38bdf8;
+    outline-offset: 4px;
+}

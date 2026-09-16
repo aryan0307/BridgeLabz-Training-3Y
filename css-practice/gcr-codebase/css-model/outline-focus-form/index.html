@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline & Focus Styling Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <header class="form-header">
+            <h2>Contact Us</h2>
+            <p>Click on each field to explore varied focus outlines and offset behaviors.</p>
+        </header>
+
+        <form class="styled-form">
+            <!-- Field 1: Solid Outline + 4px Offset -->
+            <div class="form-group">
+                <label for="fullName">Full Name <span>(Focus: Solid Outline, 4px Offset)</span></label>
+                <input type="text" id="fullName" class="input-field input-solid" placeholder="John Doe">
+            </div>
+
+            <!-- Field 2: Dashed Outline + 6px Offset -->
+            <div class="form-group">
+                <label for="emailAddr">Email Address <span>(Focus: Dashed Outline, 6px Offset)</span></label>
+                <input type="email" id="emailAddr" class="input-field input-dashed" placeholder="john@example.com">
+            </div>
+
+            <!-- Field 3: Double Outline + 3px Offset -->
+            <div class="form-group">
+                <label for="subjectTitle">Subject <span>(Focus: Double Outline, 3px Offset)</span></label>
+                <input type="text" id="subjectTitle" class="input-field input-double" placeholder="Project Inquiry">
+            </div>
+
+            <!-- Field 4: Dotted Outline + 5px Offset -->
+            <div class="form-group">
+                <label for="messageBody">Message <span>(Focus: Dotted Outline, 5px Offset)</span></label>
+                <textarea id="messageBody" class="input-field textarea-dotted" rows="4" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
