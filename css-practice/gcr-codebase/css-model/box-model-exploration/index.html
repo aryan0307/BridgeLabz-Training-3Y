@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exploration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <h1>CSS Box Model Exploration</h1>
+            <p>Deconstructing content, padding, border, and margin layers alongside box-sizing behavior.</p>
+        </header>
+
+        <!-- Centered Flexbox Showcase Container -->
+        <main class="showcase-container">
+            <!-- Part 1: Visual Box Model Layers -->
+            <section class="section-card">
+                <h2>1. The Four Box Model Layers</h2>
+                <p class="section-desc">Nested visualization showing how Margin, Border, Padding, and Content wrap around each element.</p>
+
+                <div class="visual-box-model">
+                    <!-- Outer Layer: Margin -->
+                    <div class="layer margin-layer">
+                        <span class="layer-tag">MARGIN (24px)</span>
+                        <!-- Layer 2: Border -->
+                        <div class="layer border-layer">
+                            <span class="layer-tag">BORDER (12px)</span>
+                            <!-- Layer 3: Padding -->
+                            <div class="layer padding-layer">
+                                <span class="layer-tag">PADDING (24px)</span>
+                                <!-- Layer 4: Content -->
+                                <div class="layer content-layer">
+                                    <span class="layer-tag">CONTENT</span>
+                                    <p>Inner Element Core</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descriptive summary of each layer -->
+                <div class="layer-descriptions">
+                    <div class="desc-item margin-desc">
+                        <strong>Margin:</strong> Clears an area outside the border. It is completely transparent.
+                    </div>
+                    <div class="desc-item border-desc">
+                        <strong>Border:</strong> A line surrounding the padding and content. Accepts colors & styles.
+                    </div>
+                    <div class="desc-item padding-desc">
+                        <strong>Padding:</strong> Clears an area around the content. Inherits element background.
+                    </div>
+                    <div class="desc-item content-desc">
+                        <strong>Content:</strong> The actual text, images, or child elements of the box.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Part 2: Content-Box vs Border-Box Comparison -->
+            <section class="section-card">
+                <h2>2. Box Sizing Comparison</h2>
+                <p class="section-desc">Both boxes specify <code>width: 260px</code>, <code>padding: 20px</code>, and <code>border: 10px</code>.</p>
+
+                <div class="comparison-grid">
+                    <!-- Box Sizing: content-box -->
+                    <div class="comparison-card">
+                        <h3>content-box (Default)</h3>
+                        <div class="demo-box box-content-box">
+                            <div class="inner-label">Content Core</div>
+                        </div>
+                        <div class="calc-box">
+                            <p><strong>Rendered Total Width:</strong> 320px</p>
+                            <code>260 (W) + 40 (P) + 20 (B) = 320px</code>
+                        </div>
+                        <p class="explanation">Width applies only to content. Padding & borders grow the total box size.</p>
+                    </div>
+
+                    <!-- Box Sizing: border-box -->
+                    <div class="comparison-card">
+                        <h3>border-box</h3>
+                        <div class="demo-box box-border-box">
+                            <div class="inner-label">Content Core</div>
+                        </div>
+                        <div class="calc-box">
+                            <p><strong>Rendered Total Width:</strong> 260px</p>
+                            <code>Width stays 260px overall</code>
+                        </div>
+                        <p class="explanation">Width includes content, padding, and border within the specified size.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
