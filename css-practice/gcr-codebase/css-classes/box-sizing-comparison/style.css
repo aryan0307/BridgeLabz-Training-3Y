@@ -1,0 +1,205 @@
+/* Reset & Global Base */
+* {
+    box-sizing: border-box; /* Global baseline for reset */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 950px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.header code {
+    color: #f59e0b;
+    background-color: #1e293b;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Flexbox Layout Centering Content Side by Side */
+.comparison-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.box-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.card-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.card-content-box .card-badge {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.card-border-box .card-badge {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.box-card h2 {
+    font-size: 1.5rem;
+    color: #f1f5f9;
+    margin-bottom: 25px;
+    font-family: monospace;
+}
+
+/* --- DEMONSTRATION BOXES WITH EQUAL WIDTH (260px) & PADDING (25px) --- */
+
+/* 1. Default content-box Demo */
+.content-box-demo {
+    box-sizing: content-box; /* Exact property required */
+    width: 260px;
+    padding: 25px;
+    border: 10px solid #f59e0b;
+    background-color: #0d9488; /* Contrasting background 1 */
+    outline: 2px dashed #2dd4bf;
+    outline-offset: 4px;
+}
+
+/* 2. border-box Demo */
+.border-box-demo {
+    box-sizing: border-box; /* Exact property required */
+    width: 260px;
+    padding: 25px;
+    border: 10px solid #38bdf8;
+    background-color: #4f46e5; /* Contrasting background 2 */
+    outline: 2px dashed #818cf8;
+    outline-offset: 4px;
+}
+
+.demo-box {
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-core {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Metrics and Calculation Table */
+.metrics {
+    width: 100%;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.metric-row strong {
+    color: #f1f5f9;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #38bdf8;
+    border-top: 1px solid #334155;
+    padding-top: 8px;
+    margin-top: 4px;
+}
+
+.total-row strong {
+    color: #38bdf8;
+    font-size: 1.05rem;
+}
+
+/* Descriptive Text */
+.desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.desc code {
+    color: #f1f5f9;
+    background-color: #0f172a;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 680px) {
+    .comparison-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box-card {
+        width: 100%;
+    }
+}

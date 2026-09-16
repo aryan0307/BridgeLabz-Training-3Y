@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Comparison Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>Box-Sizing Comparison</h1>
+            <p>Visualizing how <code>box-sizing: content-box</code> vs <code>box-sizing: border-box</code> calculates rendered width.</p>
+        </header>
+
+        <!-- Centered Side-by-Side Flexbox Comparison -->
+        <main class="comparison-wrapper">
+            <!-- Box 1: Default content-box -->
+            <div class="box-card card-content-box">
+                <div class="card-badge">Default Sizing</div>
+                <h2>content-box</h2>
+                
+                <div class="demo-box content-box-demo">
+                    <div class="inner-core">Content Area</div>
+                </div>
+
+                <div class="metrics">
+                    <div class="metric-row"><span>Declared Width:</span> <strong>260px</strong></div>
+                    <div class="metric-row"><span>Padding (each side):</span> <strong>25px</strong></div>
+                    <div class="metric-row"><span>Border (each side):</span> <strong>10px</strong></div>
+                    <div class="total-row"><span>Rendered Total Width:</span> <strong>330px</strong></div>
+                </div>
+
+                <p class="desc">
+                    In <code>content-box</code>, padding and border are added <em>on top of</em> the specified width, making the element physically wider than 260px.
+                </p>
+            </div>
+
+            <!-- Box 2: border-box -->
+            <div class="box-card card-border-box">
+                <div class="card-badge">Modern Standard</div>
+                <h2>border-box</h2>
+                
+                <div class="demo-box border-box-demo">
+                    <div class="inner-core">Content Area</div>
+                </div>
+
+                <div class="metrics">
+                    <div class="metric-row"><span>Declared Width:</span> <strong>260px</strong></div>
+                    <div class="metric-row"><span>Padding (each side):</span> <strong>25px</strong></div>
+                    <div class="metric-row"><span>Border (each side):</span> <strong>10px</strong></div>
+                    <div class="total-row"><span>Rendered Total Width:</span> <strong>260px</strong></div>
+                </div>
+
+                <p class="desc">
+                    In <code>border-box</code>, padding and border are absorbed <em>inside</em> the declared width. Total rendered width remains exactly 260px.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
