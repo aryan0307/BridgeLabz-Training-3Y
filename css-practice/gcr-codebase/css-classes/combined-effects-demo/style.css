@@ -1,0 +1,190 @@
+/* Reset and Base Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 45px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* Flexbox Layout for Even Distribution */
+.effects-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.effect-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    padding: 35px 25px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    /* Smooth card transition for combined hover effect */
+    transition: all 0.3s ease;
+}
+
+/* Combined card hover transformation & shadow expansion */
+.effect-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+    border-color: #475569;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.effect-card:hover .card-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.effect-card h3 {
+    font-size: 1.3rem;
+    color: #f1f5f9;
+    margin-bottom: 12px;
+}
+
+.effect-card p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.effect-card code {
+    color: #38bdf8;
+    background-color: #0f172a;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* --- EXAMPLE 1: COMBINED SCALE & LIFT BUTTON --- */
+.effect-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    /* Smooth transition combining all property changes */
+    transition: all 0.3s ease;
+}
+
+.btn-scale {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Pseudo-class :hover combining scale, color, and box-shadow */
+.btn-scale:hover {
+    transform: scale(1.08) translateY(-3px);
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.5);
+}
+
+/* Pseudo-class :active for click response */
+.btn-scale:active {
+    transform: scale(0.96) translateY(0);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
+}
+
+/* Pseudo-class :focus */
+.btn-scale:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+}
+
+/* --- EXAMPLE 2: ROTATE & GLOW BUTTON --- */
+.btn-glow {
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-glow:hover {
+    transform: scale(1.06) rotate(-2deg);
+    background: linear-gradient(135deg, #047857, #059669);
+    box-shadow: 0 10px 22px rgba(16, 185, 129, 0.6);
+}
+
+.btn-glow:active {
+    transform: scale(0.98) rotate(0deg);
+}
+
+.btn-glow:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.4);
+}
+
+/* --- EXAMPLE 3: COMBINED SKEW & FOCUS INPUT --- */
+.effect-input {
+    width: 100%;
+    padding: 12px 18px;
+    background-color: #0f172a;
+    border: 2px solid #475569;
+    border-radius: 10px;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    font-family: inherit;
+    /* Transition combining input states */
+    transition: all 0.3s ease;
+}
+
+.effect-input:hover {
+    transform: skewX(-2deg);
+    border-color: #a855f7;
+    background-color: #1e1b4b;
+}
+
+/* Pseudo-class :focus combined with transform & outline shadow */
+.effect-input:focus {
+    outline: none;
+    transform: skewX(0deg) translateY(-3px);
+    border-color: #c084fc;
+    background-color: #0f172a;
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.3), 0 0 0 4px rgba(168, 85, 247, 0.25);
+}

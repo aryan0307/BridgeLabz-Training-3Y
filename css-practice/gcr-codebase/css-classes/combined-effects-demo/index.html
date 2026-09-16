@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Effects Demonstration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <h1>Combined CSS Effects Showcase</h1>
+            <p>Combining pseudo-classes (:hover, :focus, :active), 2D transforms, and smooth transitions.</p>
+        </header>
+
+        <!-- Flexbox Even Distribution -->
+        <main class="effects-grid">
+            <!-- Example 1: Growing Action Button -->
+            <div class="effect-card">
+                <div class="card-icon">🚀</div>
+                <h3>1. Lift & Scale Button</h3>
+                <p>Combines <code>:hover</code> scale + lift, shadow elevation, background color shift, and <code>:active</code> shrink.</p>
+                <button class="effect-btn btn-scale">Hover & Click Me</button>
+            </div>
+
+            <!-- Example 2: Rotating Feature Card -->
+            <div class="effect-card card-rotate">
+                <div class="card-icon">⚡</div>
+                <h3>2. Rotate & Glow Card</h3>
+                <p>Combines <code>:hover</code> 3D-tilt transform, glowing shadow expansion, and border highlight.</p>
+                <button class="effect-btn btn-glow">Activate Pulse</button>
+            </div>
+
+            <!-- Example 3: Skew & Focus Interactive Field -->
+            <div class="effect-card">
+                <div class="card-icon">🎨</div>
+                <h3>3. Focus Offset & Shift</h3>
+                <p>Combines <code>:focus</code> outline pop, <code>:hover</code> skew transform, and input background shift.</p>
+                <input type="text" class="effect-input" placeholder="Click to focus me...">
+            </div>
+        </main>
+    </div>
+</body>
+</html>
