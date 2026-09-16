@@ -1,0 +1,170 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 45px;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* Flexbox Centering for Showcase Elements */
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.animation-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 30px 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.animation-card h3 {
+    font-size: 1.2rem;
+    color: #f1f5f9;
+    margin-bottom: 20px;
+}
+
+.stage {
+    width: 100%;
+    height: 150px;
+    background-color: #0f172a;
+    border-radius: 12px;
+    border: 1px dashed #475569;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* --- ANIMATED ELEMENT 1: MOVING BOX --- */
+.moving-box {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
+    /* Keyframe Animation Properties */
+    animation-name: moveHorizontal;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-70px) rotate(0deg);
+    }
+    100% {
+        transform: translateX(70px) rotate(180deg);
+    }
+}
+
+/* --- ANIMATED ELEMENT 2: BOUNCING BALL --- */
+.bouncing-ball {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #f43f5e, #fb923c);
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(244, 63, 94, 0.5);
+    /* Keyframe Animation Properties */
+    animation-name: bounceVertical;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0.3s; /* Demonstrating animation-delay */
+}
+
+@keyframes bounceVertical {
+    0% {
+        transform: translateY(-40px) scaleX(0.95);
+    }
+    100% {
+        transform: translateY(40px) scaleX(1.1) scaleY(0.9);
+    }
+}
+
+/* --- ANIMATED ELEMENT 3: COLOR-CHANGING TEXT --- */
+.color-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    /* Keyframe Animation Properties */
+    animation-name: colorShiftGlow;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0.6s;
+}
+
+@keyframes colorShiftGlow {
+    0% {
+        color: #a855f7;
+        text-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
+        transform: scale(1);
+    }
+    50% {
+        color: #10b981;
+        text-shadow: 0 0 20px rgba(16, 185, 129, 0.9);
+        transform: scale(1.15);
+    }
+    100% {
+        color: #f59e0b;
+        text-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+        transform: scale(1);
+    }
+}
+
+.animation-card code {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    border: 1px solid #334155;
+}
