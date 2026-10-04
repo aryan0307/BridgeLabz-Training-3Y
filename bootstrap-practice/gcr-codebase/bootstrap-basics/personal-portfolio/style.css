@@ -1,0 +1,17 @@
+/* Profile image */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contact section */
+.contact-section {
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    color: #555;
+}
