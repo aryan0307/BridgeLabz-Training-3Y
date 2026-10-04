@@ -1,0 +1,10 @@
+/* Food image */
+figure img {
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* Table spacing */
+.table {
+    vertical-align: middle;
+}
