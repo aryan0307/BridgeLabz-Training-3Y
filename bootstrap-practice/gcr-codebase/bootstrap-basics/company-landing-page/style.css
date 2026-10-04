@@ -1,0 +1,21 @@
+/* Hero section */
+.hero {
+    background-color: #f1f5f9;
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Feature boxes */
+.feature-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
