@@ -1,0 +1,107 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Gallery using CSS Grid */
+.gallery {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+
+    /* Required grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 25px;
+}
+
+/* Individual gallery item */
+.gallery-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Images */
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+
+    /* Smooth filter transition */
+    transition: filter 0.5s ease;
+}
+
+/* Different filters */
+.blur {
+    filter: blur(3px);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.sepia {
+    filter: sepia(100%);
+}
+
+.brightness {
+    filter: brightness(150%);
+}
+
+.contrast {
+    filter: contrast(180%);
+}
+
+.hue {
+    filter: hue-rotate(120deg);
+}
+
+/* Remove filter on hover */
+.gallery-item img:hover {
+    filter: none;
+}
+
+/* Captions */
+figcaption {
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
