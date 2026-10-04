@@ -1,0 +1,8 @@
+/* Product card hover effect */
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
