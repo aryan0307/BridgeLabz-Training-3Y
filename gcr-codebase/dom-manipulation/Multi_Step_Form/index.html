@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Multi-Step Form</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="container"><h1>Registration</h1><p id="stepLabel">Step 1 of 3</p>
+<form id="multiStepForm" novalidate>
+<section class="step active"><label>Name<input id="name" type="text" autocomplete="name"></label></section>
+<section class="step"><label>Email<input id="email" type="email" autocomplete="email"></label></section>
+<section class="step"><label>Password<input id="password" type="password" autocomplete="new-password"></label></section>
+<p id="error" role="alert"></p><div class="actions"><button id="backButton" type="button" disabled>Back</button><button id="nextButton" type="button">Next</button></div>
+</form><section id="summary" hidden><h2>Registration Summary</h2><pre id="summaryDetails"></pre></section>
+</main><script src="script.js"></script></body></html>
